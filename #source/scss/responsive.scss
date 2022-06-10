@@ -1,0 +1,910 @@
+@media (max-width: 350px) {
+    //MAIN PAGE ↓
+    .presentation__cars__body {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 105px 105px 105px;
+        grid-template-rows: 80px 80px 80px;
+        column-gap: 10px;
+        row-gap: 10px;
+        align-self: center;
+        justify-content: center;
+        height: 300px;
+    }
+    .presentation__card__cars {
+        width: 100%;
+        height: 100%;
+    }
+
+    //CONTACT PAGE ↓
+    .menu__notification {
+    }
+    .main__contact__page {
+        height: 750px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contact__info__form {
+        width: 100%;
+
+        height: 340px;
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: $greyStandart;
+        border-radius: 6px;
+        padding: 30px 35px 30px 35px;
+        border: 2px solid rgba(225, 229, 238, 0.2);
+        box-shadow: 0px 0px 10px rgba(225, 229, 238, 0.25);
+    }
+
+    .number__info {
+        width: 190px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .number__text {
+            font-family: $yanoneFont;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 34px;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.215em;
+
+            color: $black;
+        }
+        .number__item {
+            font-family: $yanoneFont;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.215em;
+            text-decoration-line: underline;
+            .number {
+                color: $greyDark;
+            }
+        }
+    }
+
+    .mail__info {
+        width: 230px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .mail__text {
+            font-family: $yanoneFont;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 34px;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.215em;
+
+            color: $black;
+        }
+        .mail {
+            font-family: $yanoneFont;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.215em;
+
+            color: $greyDark;
+        }
+    }
+
+    .adress__info {
+        width: 230px;
+        height: 94px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .adress__text {
+            font-family: $yanoneFont;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 34px;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.215em;
+
+            color: $black;
+        }
+        .adress {
+            font-family: $yanoneFont;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.215em;
+
+            color: $greyDark;
+        }
+    }
+    .contact__message__form {
+        width: 300px;
+        height: 280px;
+        display: flex;
+
+        flex-direction: column;
+        margin-top: 64px;
+        .message__label {
+            font-family: $yanoneFont;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            height: 30px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: #d3d3d3;
+        }
+
+        .input__principal {
+            width: 100%;
+            font-size: 1rem;
+            height: 60px;
+            font-size: 1.8rem;
+            background-color: none;
+        }
+        .message__warning__text {
+            width: 100%;
+            height: 120px;
+            font-family: "Yanone Kaffeesatz";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 80.7%;
+            /* or 19px */
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.215em;
+
+            color: #ffffff;
+        }
+    }
+
+    //LOGIN--PAGE------
+
+    .login__section {
+        height: 750px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 170px 18px 170px 18px;
+    }
+
+    .login__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 320px;
+    }
+
+    .login__register-btn {
+        width: 100%;
+        height: 45px;
+        letter-spacing: 3px;
+        font-size: 1.6rem;
+    }
+    .choise {
+        width: 100%;
+    }
+
+    .choise p {
+        margin: 28px 6px 28px 6px;
+        font-size: 1.3rem;
+    }
+    .form__login {
+        width: 100%;
+    }
+    .principal__btn {
+        height: 55px;
+        width: 100%;
+        font-size: 1.4rem;
+    }
+}
+@media (min-width: 350px) {
+    //MAIN PAGE ↓
+    .presentation__cars__body {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 105px 105px 105px;
+        grid-template-rows: 80px 80px 80px;
+        column-gap: 10px;
+        row-gap: 10px;
+        align-self: center;
+        justify-content: center;
+        height: 300px;
+    }
+    .presentation__card__cars {
+        width: 100%;
+        height: 100%;
+    }
+    .main__contact__page {
+        height: 750px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contact__info__form {
+        width: 100%;
+        width: 300px;
+        height: 340px;
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: $greyStandart;
+        border-radius: 6px;
+        padding: 30px 35px 30px 35px;
+        border: 2px solid rgba(225, 229, 238, 0.2);
+        box-shadow: 0px 0px 10px rgba(225, 229, 238, 0.25);
+    }
+
+    .number__info {
+        width: 190px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .number__text {
+            font-family: $yanoneFont;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 34px;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.215em;
+
+            color: $black;
+        }
+        .number__item {
+            font-family: $yanoneFont;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.215em;
+            text-decoration-line: underline;
+            .number {
+                color: $greyDark;
+            }
+        }
+    }
+
+    .mail__info {
+        width: 230px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .mail__text {
+            font-family: $yanoneFont;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 34px;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.215em;
+
+            color: $black;
+        }
+        .mail {
+            font-family: $yanoneFont;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.215em;
+
+            color: $greyDark;
+        }
+    }
+
+    .adress__info {
+        width: 230px;
+        height: 94px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .adress__text {
+            font-family: $yanoneFont;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 34px;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.215em;
+
+            color: $black;
+        }
+        .adress {
+            font-family: $yanoneFont;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.215em;
+
+            color: $greyDark;
+        }
+    }
+    .contact__message__form {
+        width: 300px;
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 64px;
+
+        .message__label {
+            font-family: "Yanone Kaffeesatz";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            height: 30px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: #d3d3d3;
+        }
+        .message__input {
+            height: 30px;
+            width: 100%;
+            background-color: none;
+        }
+        .send__button {
+            width: 100%;
+            height: 60px;
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
+        .message__warning__text {
+            width: 100%;
+            height: 120px;
+            font-family: "Yanone Kaffeesatz";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.215em;
+
+            color: #ffffff;
+        }
+    }
+    //LOGIN--PAGE------
+
+    .login__section {
+        height: 750px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 170px 18px 170px 18px;
+    }
+
+    .login__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 320px;
+    }
+
+    .login__register-btn {
+        width: 100%;
+        height: 45px;
+        letter-spacing: 3px;
+        font-size: 1.6rem;
+    }
+    .text__principal {
+        font-size: 1.6rem;
+        width: 100%;
+    }
+    .input__principal {
+        width: 100%;
+    }
+    .choise {
+        width: 100%;
+    }
+
+    .choise p {
+        margin: 28px 6px 28px 6px;
+        font-size: 1.3rem;
+    }
+    .form__login {
+        width: 100%;
+    }
+    .principal__btn {
+        height: 55px;
+        width: 100%;
+        font-size: 1.4rem;
+    }
+}
+@media (min-width: 425px) {
+    .presentation__cars__body {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 130px 130px 130px;
+        grid-template-rows: 90px 90px 90px;
+        column-gap: 15px;
+        row-gap: 15px;
+        align-items: center;
+
+        justify-content: center;
+        margin-bottom: 1rem;
+        height: 300px;
+    }
+    .presentation__card__cars {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contact__info__form {
+        width: 350px;
+        height: 380px;
+    }
+
+    .contact__text {
+        padding-bottom: 10px;
+    }
+
+    .contact__link {
+    }
+}
+@media (min-width: 550px) {
+    .presentation__cars__body {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 160px 160px 160px;
+        grid-template-rows: 100px 100px 100px;
+        column-gap: 15px;
+        row-gap: 15px;
+        align-items: center;
+        justify-content: center;
+        height: 350px;
+    }
+    .presentation__card__cars {
+        width: 100%;
+        height: 100%;
+    }
+
+    //CONTACT PAGE *---------*
+    .contact__info__form {
+        width: 424px;
+        height: 400px;
+    }
+}
+@media (max-width: 768px) {
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 70px;
+        width: 100%;
+        min-width: 350px;
+    }
+
+    .header__container {
+        width: 100%;
+        height: 70px;
+    }
+    .header__logo {
+        font-family: $PlayFont;
+        font-size: 3rem;
+        text-decoration: none;
+        color: $black;
+        z-index: 5;
+        height: 60px;
+        margin-left: 1rem;
+    }
+
+    .icon__position {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 1rem;
+    }
+    .menu__icon {
+        margin-right: 1rem;
+        z-index: 5;
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+    }
+    .menu__icon span,
+    .menu__icon::before,
+    .menu__icon::after {
+        right: 0;
+        position: absolute;
+        height: 10%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+        background: $black;
+    }
+    .menu__icon::before,
+    .menu__icon::after {
+        content: "";
+    }
+    .menu__icon::before {
+        top: 0;
+    }
+    .menu__icon::after {
+        bottom: 0;
+    }
+    .menu__icon span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+
+    .menu__icon._active span {
+        transform: scale(0) translate(0px, -50%);
+    }
+    .menu__icon._active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+    .menu__icon._active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+    }
+
+    .menu__body {
+        position: fixed;
+        top: 0;
+        left: -1000%;
+        width: 100%;
+        height: 100%;
+        background: $greyStandart;
+        padding: 100px 30px 30px 30px;
+        transition: left 0.3s ease 0s;
+        overflow: auto;
+    }
+    .menu__body._active {
+        left: 0;
+    }
+
+    .menu__body::before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 70px;
+        background-color: $greyStandart;
+        z-index: 2;
+        box-shadow: $black 0px 0px 6px 0px;
+    }
+
+    .menu__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu__list > li {
+        flex-wrap: wrap;
+        margin: 0px 0px 30px 0px;
+    }
+    .menu__list > li:last-child {
+        margin-bottom: 0;
+    }
+    .menu__list > li._active .menu__sub-list {
+        display: block;
+    }
+    .menu__link {
+        font-size: 1.6rem;
+        font-family: $PlayFont;
+    }
+    .menu__sub-list {
+        position: relative;
+        background: none;
+        flex: 1 1 100%;
+        margin: 20px 0px 0px 0px;
+        display: none;
+    }
+    .menu__sub-link {
+        font-size: 20px;
+        color: $dark;
+        width: 100%;
+    }
+    .nav__item {
+        margin-top: 1.3rem;
+    }
+
+    .main__img {
+        object-fit: cover;
+        width: 100%;
+        height: 350px;
+    }
+
+    h1 {
+        font-style: normal;
+        text-align: center;
+    }
+
+    h1 > button {
+        font-size: 1.6rem;
+        color: $greyStandart;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $dark;
+    }
+
+    footer a {
+        transition: all 0.3s ease;
+    }
+
+    footer a:active {
+        background-color: $dark;
+        text-decoration: underline;
+    }
+    .footer__body {
+        padding-top: 1rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .footer__nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__item {
+        display: flex;
+        width: 100%;
+    }
+    .footer__link {
+        width: 100%;
+        font-family: $yanoneFont;
+        font-size: 1rem;
+        line-height: 185%;
+        /* identical to box height, or 13px */
+        list-style-type: none;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        text-align: center;
+        letter-spacing: 0.215em;
+        color: $greyMetal;
+    }
+    .rss {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 30px;
+        width: 100%;
+        background: rgba(196, 196, 196, 0.22);
+    }
+    .rss > a {
+        font-family: "Yanone Kaffeesatz";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 6px;
+        line-height: 100.7%;
+        /* identical to box height, or 5px */
+        margin: 0px 1.4rem 0px 1.4rem;
+        display: flex;
+        align-items: flex-end;
+        letter-spacing: 0.215em;
+        color: $greyMetal;
+    }
+
+    //----------CONTACT PAGE
+}
+@media (min-width: 767px) {
+    h1 a {
+        font-size: 1.7rem;
+    }
+
+    .header__logo {
+        font-family: $PlayFont;
+        font-size: 3rem;
+        text-decoration: none;
+        color: $black;
+        z-index: 5;
+        height: 60px;
+        margin-left: 1rem;
+    }
+
+    .presentation__cars__body {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        grid-template-rows: 120px 120px 120px;
+        column-gap: 10px;
+        row-gap: 10px;
+        height: 420px;
+    }
+    .presentation__card__cars {
+        width: 100%;
+        height: 100%;
+    }
+    .car__card {
+        cursor: pointer;
+    }
+    li.menu__link {
+        width: 120px;
+    }
+    .menu__sub-list {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 0px 0px 10px 10px;
+    }
+    .menu__sub-link {
+        margin: 0 auto;
+        padding: 5px;
+        font-size: 0.85rem;
+        transition: all 0.3 ease;
+        color: $black;
+    }
+
+    .menu__sub-link:active {
+        color: $greyMetal;
+        background-color: $dark;
+    }
+
+    .menu__list {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu__sub-list {
+        transform: translate(0px, 10%);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: all 0.3s ease 0.3s;
+    }
+    //------FOOTER
+
+    footer a {
+        transition: all 0.3s ease;
+    }
+
+    footer a:active {
+        background-color: $dark;
+        text-decoration: underline;
+    }
+    footer a:hover {
+        background-color: $greyDark;
+    }
+    .footer__body {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .footer__nav {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+    }
+    .footer__item {
+        display: flex;
+        width: 100%;
+    }
+    .footer__link {
+        width: 100%;
+        font-family: $yanoneFont;
+        font-size: 1.3rem;
+        line-height: 185%;
+        /* identical to box height, or 13px */
+        list-style-type: none;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        text-align: center;
+        letter-spacing: 0.215em;
+        color: $greyMetal;
+    }
+    .rss {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 30px;
+        width: 100%;
+        background: rgba(196, 196, 196, 0.22);
+    }
+    .rss > a {
+        font-family: "Yanone Kaffeesatz";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 100.7%;
+        /* identical to box height, or 5px */
+        margin: 0px 1.4rem 0px 1.4rem;
+        letter-spacing: 0.215em;
+    }
+    //CONTACT PAGE //--------------------
+}
+
+@media (min-width: 1024px) {
+    .menu__link {
+        margin: 0px 1rem 0px 1rem;
+    }
+    .menu__sub-list {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 0px 0px 10px 10px;
+    }
+    .presentation__cars__body {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 180px 180px 180px;
+        column-gap: 15px;
+        row-gap: 15px;
+        align-items: center;
+        justify-content: center;
+        height: 600px;
+    }
+    .presentation__card__cars {
+        width: 100%;
+        height: 100%;
+    }
+
+    .h1__btn__link {
+        font-size: 2rem;
+    }
+}
