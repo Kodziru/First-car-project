@@ -625,6 +625,35 @@
         width: 424px;
         height: 400px;
     }
+
+    //AVIS PAGE ------------♫↓↓
+
+    .avis__section {
+        gap: 3rem 20px;
+    }
+
+    .avis__text__body {
+        width: 100%;
+        height: 70px;
+    }
+
+    .avis__text {
+        font-size: 1.8rem;
+    }
+
+    .avis__card__body {
+        position: relative;
+        top: 80px;
+        width: 100%;
+        padding: 12px;
+        border-radius: 0px;
+        box-shadow: $black 0px 0px 16px 10px;
+    }
+
+    .profile__img {
+        width: 80px;
+        height: 80px;
+    }
 }
 @media (max-width: 768px) {
     .header {
@@ -851,6 +880,63 @@
     //----------CONTACT PAGE ↓
 
     //----------PROFILE PAGE ↓
+    //AVIS PAGE ------------♫↓↓
+
+    .avis__section {
+        gap: 3rem 20px;
+    }
+
+    .avis__text__body {
+        width: 100%;
+        height: 70px;
+    }
+
+    .avis__card__body {
+        position: relative;
+        top: 80px;
+        left: 0px;
+        width: 100%;
+        padding: 12px;
+        border-radius: 12px;
+        box-shadow: $black 0px 0px 16px 10px;
+    }
+
+    .profile__name > .name {
+        font-size: 1.8rem;
+    }
+
+    .profile__img {
+        width: 80px;
+        height: 80px;
+    }
+    //AVIS PAGE ------------♫↓↓
+
+    .avis__section {
+        gap: 3rem 20px;
+    }
+
+    .avis__text__body {
+        width: 100%;
+        height: 70px;
+    }
+
+    .avis__text {
+        font-size: 1.8rem;
+    }
+
+    .avis__card__body {
+        position: relative;
+        top: 80px;
+        width: 100%;
+        padding: 12px;
+        border-radius: 0px;
+        box-shadow: $black 0px 0px 16px 10px;
+    }
+
+    .profile__img {
+        width: 80px;
+        height: 80px;
+    }
 }
 @media (min-width: 767px) {
     h1 a {
@@ -896,7 +982,7 @@
         margin: 0 auto;
         padding: 5px;
         font-size: 0.85rem;
-        transition: all 0.3 ease;
+        transition: all 0.1s ease;
         color: $black;
     }
 
@@ -916,7 +1002,7 @@
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
-        transition: all 0.3s ease 0.3s;
+        transition: all 0.1s ease;
     }
     //------FOOTER
 
@@ -983,6 +1069,38 @@
 
     .form__login {
         width: 430px;
+    }
+    .avis__section {
+        gap: 3rem 20px;
+    }
+
+    .avis__text__body {
+        width: 100%;
+        height: 70px;
+    }
+
+    .avis__text {
+        font-size: 1.8rem;
+    }
+
+    .avis__card__body {
+        position: relative;
+        top: 80px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 12px;
+        border-radius: 12px;
+        border: 1px solid $greySolidMetal;
+        box-shadow: $black 0px 0px 16px 10px;
+    }
+
+    .profile__name > .name {
+        font-size: 1.6rem;
+    }
+
+    .profile__img {
+        width: 80px;
+        height: 80px;
     }
 }
 

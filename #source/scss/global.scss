@@ -139,7 +139,7 @@ body._lock {
 }
 .menu__sub-link {
     color: #fff;
-    transition: 0.3s;
+    transition: 0.1s all ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1082,4 +1082,82 @@ input[type="checkbox"] {
             }
         }
     }
+}
+
+//PAGE AVIS ↓----------------
+
+.avis__main__page {
+    width: 100%;
+    height: 100%;
+}
+
+.avis__section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.avis__text__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    background-color: $redApex;
+}
+
+.avis__text {
+    text-align: center;
+    font-family: $PlayFont;
+    color: $greyStandart;
+}
+
+.avis__card__body {
+    font-family: $PlayFont;
+
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr 1fr;
+    grid-template-rows: minmax(100px, auto);
+    grid-template-areas:
+        "avis__img__body profile__name profile__name profile__name"
+        "avis__comment avis__comment avis__comment avis__comment "
+        "avis__comment avis__comment avis__comment avis__comment"
+        "avis__date avis__date avis__date avis__date";
+    max-width: 768px;
+    min-height: 280px;
+    padding: 12px;
+    box-shadow: $black 0px 0px 16px 10px;
+    background-color: $greyDark;
+}
+.avis__card__body > div > * {
+    color: $greyMetal;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+.avis__img__body {
+    grid-area: avis__img__body;
+    display: grid;
+    align-self: center;
+}
+.profile__name {
+    grid-area: profile__name;
+    align-self: center;
+}
+.avis__comment {
+    grid-area: avis__comment;
+    margin-top: 12px;
+}
+.avis__date {
+    grid-area: avis__date;
+    display: grid;
+    align-self: end;
+    justify-content: end;
+    margin-top: 12px;
+}
+
+.profile__img {
+    width: 80px;
+    height: 80px;
+    box-shadow: $black 0px 0px 12px 1px;
 }

@@ -148,8 +148,8 @@ body._lock {
 
 .menu__sub-link {
   color: #fff;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.1s all ease;
+  transition: 0.1s all ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1350,6 +1350,117 @@ input[type=checkbox].switch:disabled:not(:checked):after {
   opacity: 0.6;
 }
 
+.avis__main__page {
+  width: 100%;
+  height: 100%;
+}
+
+.avis__section {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.avis__text__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 70px;
+  background-color: #c02130;
+}
+
+.avis__text {
+  text-align: center;
+  font-family: "Play", sans-serif;
+  color: #d3d3d3;
+}
+
+.avis__card__body {
+  font-family: "Play", sans-serif;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 1fr 1fr 1fr;
+  grid-template-columns: 100px 1fr 1fr 1fr;
+  -ms-grid-rows: minmax(100px, auto);
+  grid-template-rows: minmax(100px, auto);
+      grid-template-areas: "avis__img__body profile__name profile__name profile__name" "avis__comment avis__comment avis__comment avis__comment " "avis__comment avis__comment avis__comment avis__comment" "avis__date avis__date avis__date avis__date";
+  max-width: 768px;
+  min-height: 280px;
+  padding: 12px;
+  -webkit-box-shadow: #110305 0px 0px 16px 10px;
+          box-shadow: #110305 0px 0px 16px 10px;
+  background-color: #2a324b;
+}
+
+.avis__card__body > div > * {
+  color: #c7ccdb;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+}
+
+.avis__img__body {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: avis__img__body;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.profile__name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: profile__name;
+  -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.avis__comment {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: avis__comment;
+  margin-top: 12px;
+}
+
+.avis__date {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: avis__date;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row-align: end;
+      align-self: end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-top: 12px;
+}
+
+.profile__img {
+  width: 80px;
+  height: 80px;
+  -webkit-box-shadow: #110305 0px 0px 12px 1px;
+          box-shadow: #110305 0px 0px 12px 1px;
+}
+
 @media (max-width: 350px) {
   .presentation__cars__body {
     width: 100%;
@@ -2309,6 +2420,34 @@ input[type=checkbox].switch:disabled:not(:checked):after {
     width: 424px;
     height: 400px;
   }
+
+  .avis__section {
+    gap: 3rem 20px;
+  }
+
+  .avis__text__body {
+    width: 100%;
+    height: 70px;
+  }
+
+  .avis__text {
+    font-size: 1.8rem;
+  }
+
+  .avis__card__body {
+    position: relative;
+    top: 80px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 0px;
+    -webkit-box-shadow: #110305 0px 0px 16px 10px;
+            box-shadow: #110305 0px 0px 16px 10px;
+  }
+
+  .profile__img {
+    width: 80px;
+    height: 80px;
+  }
 }
 @media (max-width: 768px) {
   .header {
@@ -2611,6 +2750,63 @@ input[type=checkbox].switch:disabled:not(:checked):after {
     letter-spacing: 0.215em;
     color: #c7ccdb;
   }
+
+  .avis__section {
+    gap: 3rem 20px;
+  }
+
+  .avis__text__body {
+    width: 100%;
+    height: 70px;
+  }
+
+  .avis__card__body {
+    position: relative;
+    top: 80px;
+    left: 0px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    -webkit-box-shadow: #110305 0px 0px 16px 10px;
+            box-shadow: #110305 0px 0px 16px 10px;
+  }
+
+  .profile__name > .name {
+    font-size: 1.8rem;
+  }
+
+  .profile__img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .avis__section {
+    gap: 3rem 20px;
+  }
+
+  .avis__text__body {
+    width: 100%;
+    height: 70px;
+  }
+
+  .avis__text {
+    font-size: 1.8rem;
+  }
+
+  .avis__card__body {
+    position: relative;
+    top: 80px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 0px;
+    -webkit-box-shadow: #110305 0px 0px 16px 10px;
+            box-shadow: #110305 0px 0px 16px 10px;
+  }
+
+  .profile__img {
+    width: 80px;
+    height: 80px;
+  }
 }
 @media (min-width: 767px) {
   h1 a {
@@ -2718,8 +2914,8 @@ input[type=checkbox].switch:disabled:not(:checked):after {
     margin: 0 auto;
     padding: 5px;
     font-size: 0.85rem;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
+    -webkit-transition: all 0.1s ease;
+    transition: all 0.1s ease;
     color: #110305;
   }
 
@@ -2746,8 +2942,8 @@ input[type=checkbox].switch:disabled:not(:checked):after {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    -webkit-transition: all 0.3s ease 0.3s;
-    transition: all 0.3s ease 0.3s;
+    -webkit-transition: all 0.1s ease;
+    transition: all 0.1s ease;
   }
 
   footer a {
@@ -2835,6 +3031,40 @@ input[type=checkbox].switch:disabled:not(:checked):after {
 
   .form__login {
     width: 430px;
+  }
+
+  .avis__section {
+    gap: 3rem 20px;
+  }
+
+  .avis__text__body {
+    width: 100%;
+    height: 70px;
+  }
+
+  .avis__text {
+    font-size: 1.8rem;
+  }
+
+  .avis__card__body {
+    position: relative;
+    top: 80px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #767b91;
+    -webkit-box-shadow: #110305 0px 0px 16px 10px;
+            box-shadow: #110305 0px 0px 16px 10px;
+  }
+
+  .profile__name > .name {
+    font-size: 1.6rem;
+  }
+
+  .profile__img {
+    width: 80px;
+    height: 80px;
   }
 }
 @media (min-width: 1024px) {
