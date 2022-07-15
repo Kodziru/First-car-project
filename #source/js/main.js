@@ -93,15 +93,23 @@ if (menuLinks.length > 0) {
 function nextFunction() {
     let btnNextElement = document.querySelector(".register__form1");
     let nextForm = document.querySelector(".register__form2");
+    let next__btn = document.querySelector(".next__btn");
+    let back__btn = document.querySelector(".back__btn");
     btnNextElement.classList.toggle("_next");
     nextForm.classList.toggle("_show");
+    next__btn.classList.toggle("_next");
+    back__btn.classList.toggle("_show");
 }
 
 function backFunctuin() {
     let btnNextElement = document.querySelector(".register__form1");
     let nextForm = document.querySelector(".register__form2");
+    let next__btn = document.querySelector(".next__btn");
+    let back__btn = document.querySelector(".back__btn");
     btnNextElement.classList.remove("_next");
     nextForm.classList.remove("_show");
+    next__btn.classList.toggle("_next");
+    back__btn.classList.toggle("_show");
 }
 
 //SHOPPING PAGE // MAGASIN PAGE ↓↓

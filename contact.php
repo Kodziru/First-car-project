@@ -16,7 +16,7 @@
         <div class="wrapper">
 <header class="header">
     <div class="header__container">
-        <a href="index.html" class="header__logo">Your Car</a>
+        <a href="index.php" class="header__logo">Your Car</a>
         <div class="header__menu menu">
             <div class="menu__icon">
                 <span></span>
@@ -47,7 +47,7 @@
                         <span class="menu__arrow"></span>
                         <ul class="menu__sub-list">
                             <li>
-                                <a href="contact.html" class="menu__sub-link"
+                                <a href="contact.php" class="menu__sub-link"
                                     >INFORMATIONS</a
                                 >
                             </li>
@@ -150,6 +150,6 @@
         <a href="">© Tous droits réservés</a>
     </div>
 </footer>
-        <script src="./js/main.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

@@ -1,3 +1,47 @@
+<?php 
+include 'config\config.php';
+
+
+
+if(isset($_POST['submit'])) {
+    $firstName = mysqli_real_escape_string($conn, $_POST['firstName']);
+    $lastName = mysqli_real_escape_string($conn, $_POST['lastName']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $pass = mysqli_real_escape_string($conn, md5($_POST['password']));
+    $cpass = mysqli_real_escape_string($conn, md5($_POST['cpassword']));
+    $number = mysqli_real_escape_string($conn, $_POST['number']);
+    $adresse = mysqli_real_escape_string($conn, $_POST['adresse']);
+    $codePostale = mysqli_real_escape_string($conn, $_POST['codePostale']);
+    $ville = mysqli_real_escape_string($conn, $_POST['ville']);
+    
+
+    $image = $_FILES['image']['name'];
+    $image_size = $_FILES['image']['size'];
+    $image_tmp_name = $_FILES['image']['tmp_name'];
+    $image_folder = 'uploaded_img/'.$image;
+    $select = mysqli_query($conn, "SELECT * FROM `user_form` WHERE email = '$email' AND password = '$pass'") or die ('query failed');
+    if(mysqli_num_rows($select) > 0) {
+    $message[] = 'user already exist';
+    } else {
+        if($pass != $cpass) {
+            $message[] = 'Mot de passe incorrecte';
+        }elseif($image_size > 2000000) {
+            $message[] = 'Image ne doit pas dépasser 2mb';
+        } else{
+            $insert = mysqli_query($conn,"INSERT INTO `user_form`(firstName,lastName, email, password ,number ,adresse ,codePostale ,ville ,image) 
+            VALUES('$firstName','$lastName','$email','$pass', '$number', '$adresse', '$codePostale', '$ville')") or die ('query failed');
+            if($insert) {
+                move_uploaded_file($image_tmp_name, $image_folder);
+                $message[] = 'Bienvenue sur notre site';
+                header('location:login.php');
+            }else {
+                $message[] = 'essayez à nouveau
+                ';
+            }
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -19,12 +63,13 @@
             <main class="register__main main">
                 <section class="register__section login__register-section">
                     <div class="register__body login__register-body">
-                        <div class="register__form1 login__register-form">
+                        <form method="POST" enctype="multipart/form-data" class="form">
+                            <div class="register__form1 login__register-form">
                             <button
                                 type="submit"
                                 class="button login__register-btn"
                             >
-                                <a href="" class="login__register-link">
+                                <a href="login.php" class="login__register-link">
                                     CONNECTER</a
                                 >
                             </button>
@@ -33,12 +78,18 @@
                                 <p>ou</p>
                                 <span></span>
                             </div>
+                            <?php
+                            if (isset($message)) {
+                                foreach($message as $message)
+                                echo '<div class"message__register">'.$message.'</div>';
+                            }
+                            ?>
                             <h3 class="text__principal register__label">NOM</h3>
                             <input
                                 type="text"
                                 name="lastName"
                                 class="register__input input__principal"
-                                maxlength="90"
+                                maxlength="100"
                                 id=""
                                 placeholder="..."
                             />
@@ -49,7 +100,7 @@
                                 type="text"
                                 name="firstName"
                                 class="register__input input__principal"
-                                maxlength="90"
+                                maxlength="100"
                                 id=""
                                 placeholder="..."
                             />
@@ -58,7 +109,7 @@
                                 type="text"
                                 name="email"
                                 class="register__input input__principal"
-                                maxlength="90"
+                                maxlength="100"
                                 id=""
                                 placeholder="..."
                             />
@@ -69,20 +120,23 @@
                                 type="password"
                                 name="password"
                                 class="register__input input__principal"
-                                maxlength="90"
+                                maxlength="100"
                                 id=""
                                 placeholder="..."
                             />
-                            <button
-                                type="submit"
-                                id="next__btn"
-                                onclick="nextFunction()"
-                                class="register__btn principal__btn next__btn"
-                            >
-                                SUIVANT
-                            </button>
-                        </div>
-                        <div class="register__form2 login__register-form">
+                            <h3 class="text__principal login__label">
+                                CONFIRMER LE MDP
+                            </h3>
+                            <input
+                                type="password"
+                                name="cpassword"
+                                class="register__input input__principal"
+                                maxlength="100"
+                                id=""
+                                placeholder="..."
+                            />
+                            </div>
+                            <div class="register__form2 login__register-form">
                             <h3 class="text__principal register__label">
                                 TELEPHONE
                             </h3>
@@ -90,7 +144,7 @@
                                 type="text"
                                 name="number"
                                 class="register__input input__principal"
-                                maxlength="90"
+                                maxlength="100"
                                 id=""
                                 placeholder="..."
                             />
@@ -101,7 +155,7 @@
                                 type="text"
                                 name="firstName"
                                 class="register__input input__principal"
-                                maxlength="90"
+                                maxlength="100"
                                 id=""
                                 placeholder="..."
                             />
@@ -112,7 +166,7 @@
                                 type="text"
                                 name="index"
                                 class="register__input input__principal"
-                                maxlength="90"
+                                maxlength="50"
                                 id=""
                                 placeholder="..."
                             />
@@ -121,33 +175,43 @@
                                 type="text"
                                 name="adress"
                                 class="register__input input__principal"
-                                maxlength="90"
+                                maxlength="100"
                                 id=""
                                 placeholder="..."
                             />
-                            <div class="btn__body">
-                                <button
-                                    type="submit"
-                                    id=""
-                                    class="principal__btn back__btn"
-                                    onclick="backFunctuin()"
-                                >
-                                    REVENIR
-                                </button>
                                 <button
                                     type="submit"
                                     id=""
                                     class="register__btn principal__btn apply__btn"
+                                    
                                 >
                                     CONFIRMER
                                 </button>
                             </div>
+                        </form>
+                        <div class="btn__body">
+                                <button
+                                type="submit"
+                                id=""
+                                class="register__btn principal__btn back__btn"
+                                onclick="backFunctuin()">
+                                REVENIR
+                                </button>
+                            <button
+                                type="submit"
+                                id="next__btn"
+                                onclick="nextFunction()"
+                                class="register__btn principal__btn next__btn"
+                            >
+                                SUIVANT
+                            </button>
                         </div>
                     </div>
+
                 </section>
             </main>
             <!--@import 'footer.html'-->
         </div>
-        <script src="./js/main.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

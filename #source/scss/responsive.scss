@@ -197,10 +197,8 @@
 
     .login__section,
     .login__register-section {
-        height: 750px;
+        height: 100%;
         width: 100%;
-
-        padding: 170px 18px 170px 18px;
     }
 
     .login__body,
@@ -230,7 +228,7 @@
 
     .choise p {
         margin: 28px 6px 28px 6px;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     .form__login.login__register-form {
         width: 100%;
@@ -460,8 +458,6 @@
     .login__register-section {
         height: 750px auto;
         width: 100%;
-
-        padding: 170px 18px 170px 18px;
     }
 
     .login__body,
@@ -491,7 +487,7 @@
 
     .choise p {
         margin: 28px 6px 28px 6px;
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
     .form__login,
     .login__register-form {
@@ -583,7 +579,7 @@
 
     .choise p {
         margin: 28px 6px 28px 6px;
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
     .form__login,
     .login__register-form {
